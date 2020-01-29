@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins&display=swap');
 body{
+    margin: 0;
+    height: auto;
     background-color: hsl(257, 40%, 49%);
-    background-image: url(/huddle-landing-page-with-single-introductory-section-master/images/bg-desktop.svg)
+    background-image: url(images/bg-desktop.svg);
+    padding: 60px;
 }
 h1{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-
 }
 p{
     font-family: 'Open Sans', sans-serif;
@@ -15,24 +18,28 @@ p{
 h1, p{
     color: white;
 }
-.mainSection {
-    margin: 2em;
-    padding: 2em;
+
+.intro{
+    display: flex;
+    max-width: 1440px;
 }
-
-
+img{
+    flex: 0 1 60vh;
+    height: auto;
+    width: 100%;
+}
 .logo{
     margin-bottom: 5em;
 }
-
-.container{
-    display: flex;
-    align-items:flex-start;
-    justify-content: space-around;
+.text{ 
+    margin: 5px;
 }
 
+
 .attribution 
-{ 
+{
+    position: relative;
+    float: left; 
     font-size: 11px; 
     text-align: center; 
 }
@@ -42,6 +49,7 @@ h1, p{
 }
 
 .social {
+    position: relative;
     float: right;
     color: white;
     
@@ -56,4 +64,38 @@ button{
     height: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     font-size: larger;
+    transition: 500ms ease;
 }
+button:hover{
+    background-color: lightsalmon;
+}
+
+ @media(max-width: 600px){
+    .logo{
+        display: flex;
+        justify-content: center;
+
+    } 
+    
+    .intro{
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+     .social {
+         position: static;
+         display: flex;
+         padding-top: 2em;
+         float: none;
+         justify-content: center;
+         align-items: center;
+     }
+     footer{
+         display: flex;
+         padding-top: 1em;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+ }   
